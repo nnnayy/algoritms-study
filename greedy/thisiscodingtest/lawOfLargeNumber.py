@@ -1,9 +1,9 @@
-#!/usr/bin/python
-# -*- coding: latin-1 -*-
-
 # N = 5, M = 8, K = 3
 # 5개의 숫자를 입력받고, 총 8번 더하며, 같은 숫자는 세번까지 연속될 수 있다.
 # 입력받은 자연수 2 4 5 4 6
+
+import sys
+input = sys.stdin.readline
 
 n, m, k = map(int, input().split()) # 공백으로 숫자를 나누어 각 변수에 넣어준다.
 numbers = list(map(int, input().split())) # 공백으로 숫자를 나누고 리스트에 넣어준다.

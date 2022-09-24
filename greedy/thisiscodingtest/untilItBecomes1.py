@@ -3,6 +3,9 @@
 
 # 입력값으로 25 5가 주어진다고 가정하자.
 
+import sys
+input = sys.stdin.readline
+
 n, k = map(int, input().split())
 
 result = 0

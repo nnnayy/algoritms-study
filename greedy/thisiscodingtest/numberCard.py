@@ -1,12 +1,12 @@
-#!/usr/bin/python
-# -*- coding: latin-1 -*-
-
 # 입력받는 배열에는 두 가지 경우가 있다고 가정한다.
 # 3 x 3
 # 3 1 2 / 4 1 4 / 2 2 2
 
 # 2 x 4
 # 7 3 1 8 / 3 3 3 4
+
+import sys
+input = sys.stdin.readline
 
 n, m = map(int, input().split())
 
