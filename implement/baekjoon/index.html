@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3번_3장 실습문제 5</title>
+    <style>
+      label {
+        margin: 7px;
+        margin-left: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>도형 서식 폼 만들기</h3>
+    <hr />
+    <form>
+      <fieldset>
+        <legend>도형 서식 입력</legend>
+        <label>
+          선종류&nbsp;
+          <select size="3">
+            <option value="선없음">선없음</option>
+            <option value="실선">실선</option>
+            <option value="점선">점선</option>
+          </select>
+        </label>
+        <label style="display: flex">
+          <label>선두께&nbsp;<input type="number" /></label>
+          <label
+            >선색&nbsp;<input
+              type="color"
+              value="#00BFFF"
+              onchange="document.body.style.color=this.value"
+          /></label>
+        </label>
+        <label>
+          투명도(0~100) :&nbsp;
+          <input type="range" min="0" max="100" list="transparency" />
+          <datalist id="transparency">
+            <option value="2" label="Low"></option>
+            <option value="50" label="Medium"></option>
+            <option value="98" label="High"></option>
+          </datalist>
+        </label>
+      </fieldset>
+    </form>
+  </body>
+</html>

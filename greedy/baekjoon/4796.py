@@ -8,20 +8,21 @@ input = sys.stdin.readline
 # result = 14 / 11
 # 8 8 4 / 8 8 1
 # 5 5 4 / 5 5 1
+# 연속하는p=8일 중, l=5일 동안만 사용할 수 있고, v=20일짜리 휴가를 시작했다
 
 count = 0
+days = []
 
 while True:
-    l, p, v = map(int, input().split())
-
-    days = [v, p, l]
-
     count += 1
+    l, p, v = map(int, input().split())
 
     if (v == 0) and (p == 0) and (l == 0):
         break
 
-    for day in days:
-        result = l * (v//p) + (v%p)
+    result = l * (v//p) + (v%p)
+    days.append(result)
 
-    print(f"case {count}: {result}")
+
+for i in range(count):
+    print(f"case {i+1}: {days[i]}")
